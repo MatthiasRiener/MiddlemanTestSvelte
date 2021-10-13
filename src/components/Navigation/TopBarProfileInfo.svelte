@@ -1,19 +1,46 @@
 <script>
-	import ProfileInfoPopupItem from './ProfileInfoPopupItem.svelte';
+	import ProfileInfoPopupItem from "./ProfileInfoPopupItem.svelte";
+	import ProfileSettings from "./sections/ProfileSettings/ProfileSettings.svelte";
+
+	export let closeHandler = () => {};
+
+	let profileSettingsVisible = false;
 </script>
 
-<div class="profile-info-popup absolute bg-white flex-col items-start box-border rounded-10 p-1">
-	
-	<div on:click={() => {console.log("Moin")}}>
-		<ProfileInfoPopupItem 
-		iconName="" id="profile-settings-edit" itemText="Profile Settings"/>	
+{#if profileSettingsVisible}
+	<ProfileSettings />
+{/if}
+
+<div
+	class="box-border absolute flex-col items-start p-1 bg-white profile-info-popup rounded-10"
+>
+	<div
+		on:click={() => {
+			profileSettingsVisible = !profileSettingsVisible;
+			closeHandler()
+		}}
+	>
+		<ProfileInfoPopupItem
+			iconName=""
+			id="profile-settings-edit"
+			itemText="Profile Settings"
+		/>
 	</div>
 
 	<div class="profile-info-vert-aligner" />
 
-	<ProfileInfoPopupItem iconName="person-circle-outline" itemText="Explore creators" />
-	<ProfileInfoPopupItem iconName="heart-outline" itemText="Manage membership" />
-	<ProfileInfoPopupItem iconName="compass-outline" itemText="Invite creators" />
+	<ProfileInfoPopupItem
+		iconName="person-circle-outline"
+		itemText="Explore creators"
+	/>
+	<ProfileInfoPopupItem
+		iconName="heart-outline"
+		itemText="Manage membership"
+	/>
+	<ProfileInfoPopupItem
+		iconName="compass-outline"
+		itemText="Invite creators"
+	/>
 
 	<div class="profile-info-vert-aligner" />
 

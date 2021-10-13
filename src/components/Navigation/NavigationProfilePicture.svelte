@@ -2,24 +2,30 @@
 	import TopBarProfileInfo from './TopBarProfileInfo.svelte';
 
 	let hovering = false;
+	let settingsIsOpened = false;
 
 	function enter() {
 		hovering = true;
 	}
 
 	function leave() {
+		if (settingsIsOpened) return;
 		hovering = false;
 	}
+
+	const closeOne = () => (settingsIsOpened = !settingsIsOpened);
+	
+	
 </script>
 
-<div class="h-8 flex items-center justify-center" on:mouseleave={leave}>
+<div class="flex items-center justify-center h-8" on:mouseleave={leave}>
 	<div
 		id="top-bar-profile-picture"
-		class="rounded-auto bg-cover bg-center relative cursor-pointer "
+		class="bg-center bg-cover cursor-pointer rounded-auto "
 		on:mouseenter={enter}
 	>
 		{#if hovering}
-			<TopBarProfileInfo />
+			<TopBarProfileInfo closeHandler={closeOne} />
 		{/if}
 	</div>
 
