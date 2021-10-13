@@ -8,6 +8,7 @@
     "svelte-routing": "^1.6.0"
   },
   "devDependencies": {
+    "@beyonk/svelte-mapbox": "^8.1.4",
     "@snowpack/plugin-dotenv": "^2.0.5",
     "@snowpack/plugin-run-script": "^2.2.0",
     "@snowpack/plugin-svelte": "^3.5.0",
