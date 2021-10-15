@@ -21,10 +21,13 @@ module.exports = {
     padding: {
       "15": "15vw",
       "0.4": "0.4vw",
+      "0.2w": "0.2vw",
+      "0.6w": "0.6vw",
       "1": "1vw",
       "0.4r": "0.4rem",
       "6p": "6px",
-      "1.5w": "1.5vw"
+      "1.5w": "1.5vw",
+      "7h": "7vh"
     },
     backgroundImage: {
       "tblogo": "url('/logo_topbar.png')"
@@ -57,7 +60,8 @@ module.exports = {
       "1w": "1vw",
       ".5w": "0.5vw",
       "auto": "auto !important",
-      "1h": "1vh"
+      "1h": "1vh",
+      "15w": "15vw"
     },
     fontSize: {
       "tb": "1.05rem",

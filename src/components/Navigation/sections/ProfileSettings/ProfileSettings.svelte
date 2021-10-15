@@ -1,5 +1,5 @@
 <script>
-    import Sidebar from "./settings/Sidebar.svelte";
+    import Sidebar from "./sidebar/Sidebar.svelte";
     import MainContent from "./maincontent/MainContent.svelte";
     import CloseSection from "./close/CloseSection.svelte";
 </script>
